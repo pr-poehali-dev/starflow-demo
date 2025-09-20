@@ -6,7 +6,7 @@ export default {
 		"./pages/**/*.{ts,tsx}",
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
-		"./src/**/*.{ts,tsx}",
+		"./src/**/*.{ts,tsx}"
 	],
 	prefix: "",
 	theme: {
@@ -16,6 +16,9 @@ export default {
 			screens: {
 				'2xl': '1400px'
 			}
+		},
+		fontFamily: {
+			sans: ['Rubik', 'system-ui', 'sans-serif'],
 		},
 		extend: {
 			colors: {
@@ -61,7 +64,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				'starflow-purple': '#7928CA',
+				'starflow-pink': '#FF0080',
+				'starflow-dark': '#1F2937',
+				'starflow-white': '#FFFFFF',
+				'starflow-gray': '#E5E7EB'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
