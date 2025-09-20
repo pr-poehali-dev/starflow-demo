@@ -40,7 +40,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
           />
           {product.originalPrice && (
-            <Badge className="absolute top-3 left-3 bg-starflow-pink text-white">
+            <Badge className="absolute top-3 left-3 bg-secondary text-white">
               -{Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)}%
             </Badge>
           )}
@@ -49,7 +49,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
             size="icon"
             className={`absolute top-3 right-3 rounded-full transition-colors ${
               isFavorite(product.id)
-                ? 'text-starflow-pink bg-white/90 hover:bg-white'
+                ? 'text-secondary bg-white/90 hover:bg-white'
                 : 'text-white bg-black/50 hover:bg-black/70'
             }`}
             onClick={handleToggleFavorite}
@@ -90,7 +90,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
             </span>
           </div>
 
-          <h3 className="font-medium text-foreground line-clamp-2 leading-tight">
+          <h3 className="font-medium text-foreground leading-tight">
             {product.title}
           </h3>
 
@@ -109,7 +109,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
             <Button
               onClick={handleAddToCart}
               disabled={!product.inStock}
-              className="w-full bg-starflow-purple hover:bg-starflow-purple/90 text-white"
+              className="w-full bg-primary hover:bg-primary/90 text-white"
             >
               <Icon name="ShoppingCart" size={16} className="mr-2" />
               {product.inStock ? 'В корзину' : 'Недоступно'}
